@@ -15,5 +15,6 @@ class snake{
         Position init_direct;
         snake(Position start);
         void move(bool incr);
+        bool collide(Position p);
 };
 #endif

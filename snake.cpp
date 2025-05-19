@@ -13,3 +13,11 @@ void snake::move(bool incr){
         body.pop_back();
     }
 }
+bool snake::collide(Position p){
+    for (Position x: body){
+        if (x == p){
+            return true;
+        }
+    }
+    return false;
+}
