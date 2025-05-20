@@ -3,8 +3,8 @@
 
 class Board{
     public:
-        int width = 20;
-        int height = 20;
+        static const int width = 20;
+        static const int height = 20;
         char grid[height][width];
         void clear();
         void print();

@@ -2,7 +2,8 @@
 
 snake::snake(Position start){
     body.push_back(start);
-    init_direct = {1, 0};
+    init_direct.x = 1;
+    init_direct.y = 0;
 }
 
 void snake::move(bool incr){

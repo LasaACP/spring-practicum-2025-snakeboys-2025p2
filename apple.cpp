@@ -1,11 +1,14 @@
 #include "apple.h"
 #include "board.h"
-#include "snake.h"
+
 using namespace std;
 
 void Apple::spawn(snake& s){
     while (true){
-        position = {rand()%Board::width, rand()%Board::height};
+        Position temp;
+        temp.x = rand() % Board::width;
+        temp.y = rand() % Board::height;
+        position = temp;
         if (!s.collide(position)){
             break;
         }

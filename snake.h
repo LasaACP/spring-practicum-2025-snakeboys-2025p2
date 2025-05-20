@@ -6,9 +6,10 @@ using namespace std;
 struct Position{
     int x, y;
     bool operator==(Position& temp){
-        return temp.x == temp.y;
+        return x == temp.x && y == temp.y;
     } 
 };
+
 class snake{
     public:
         list<Position> body;

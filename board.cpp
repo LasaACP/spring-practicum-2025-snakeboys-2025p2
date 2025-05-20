@@ -6,7 +6,7 @@ using namespace std;
 void Board::clear(){
     for (int i = 0; i<height; i++){
         for (int j = 0; j<width; j++){
-            grid[i][j] = " ";
+            grid[i][j] = ' ';
         }
     }
 }

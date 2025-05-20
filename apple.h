@@ -9,6 +9,7 @@ class Apple{
     public:
         void spawn(snake& s);
         Position position;
+        Position printp();
 };
 
 
