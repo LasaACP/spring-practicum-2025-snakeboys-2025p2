@@ -22,3 +22,6 @@ bool snake::collide(Position p){
     }
     return false;
 }
+list<Position> snake::getBody(){
+    return body;
+}

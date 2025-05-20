@@ -14,3 +14,6 @@ void Apple::spawn(snake& s){
         }
     }
 }
+Position Apple::getPosition(){
+    return position;
+}

@@ -5,9 +5,12 @@ using namespace std;
 
 struct Position{
     int x, y;
-    bool operator==(Position& temp){
-        return x == temp.x && y == temp.y;
-    } 
+    bool operator==(const Position& other) const {
+        return x == other.x && y == other.y;
+    }
+    bool operator<(const Position& other) const {
+        return (x < other.x) || (x == other.x && y < other.y);
+    }
 };
 
 class snake{
@@ -17,5 +20,6 @@ class snake{
         snake(Position start);
         void move(bool incr);
         bool collide(Position p);
+        list<Position> getBody();
 };
 #endif

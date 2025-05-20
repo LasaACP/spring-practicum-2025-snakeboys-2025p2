@@ -5,7 +5,8 @@
 #include "board.h"
 #include "snake.h"
 #include "apple.h"
-/*g++ -std=c++11 main.cpp Board.cpp Snake.cpp Apple.cpp -o snake*/
+#include "solver.h"
+/*g++ -std=c++11 main.cpp board.cpp snake.cpp apple.cpp solver.cpp -o snake*/
 int main() {
     Board board;
     Position sPos;
@@ -27,7 +28,12 @@ int main() {
         cout<<"input direction"<<"\n";
         char ch;
         cin>>ch;
-        
+        cout<<"solver"<<"\n";
+        Solver e;
+        list<Position> b = e.solver(apple.getPosition(), snake.getBody());
+        for (auto s: b){
+            cout<<s.x<<", "<<s.y<<"\n";
+        }
         if (ch == 'w'){ 
             snake.init_direct = {0, -1};
         }
